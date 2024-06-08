@@ -1,4 +1,4 @@
-<div class="tab-content ">
+<div class="col-8">
     <div class="tab-pane message-body active" id="inbox-message-1">
         <div class="message-top">
             <a class="btn btn btn-success new-message" data-toggle="modal" data-target="#flipFlop"> <i class="fa fa-envelope"></i> New Trips </a>

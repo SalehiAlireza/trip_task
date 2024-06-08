@@ -1,4 +1,8 @@
 <div class="panel messages-panel">
-    @livewire('home.task-list')
-    @livewire('home.trip-details')
+    <div class="container-fluid">
+        <div class="row">
+            @livewire('home.task-list')
+            @livewire('home.trip-details')
+        </div>
+    </div>
 </div>

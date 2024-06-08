@@ -868,3 +868,11 @@ body{
 .contacts li > .info-combo {
     display:inline-block;
 }
+
+.scroll-y{
+    max-height: 750px;
+    overflow-y: scroll;
+}
+
+
+
