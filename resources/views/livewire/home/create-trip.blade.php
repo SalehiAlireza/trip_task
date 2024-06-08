@@ -32,6 +32,15 @@
                             </select>
                         </div>
 
+                        <div class="col-md-12">
+                            <label for="trucks">Tasks</label>
+                            <select  multiple id="trucks" wire:model="tasks" class="form-control">
+                                @foreach($trucks as $truckItem)
+                                    <option value="{{ $truckItem->id  }}">{{ 'Model: '.$truckItem->truck_model .' / '.$truckItem->truck_code }}</option>
+                                @endforeach
+                            </select>
+                        </div>
+
                         <div class="clearfix"></div>
                         <br>
 

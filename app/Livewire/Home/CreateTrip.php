@@ -17,8 +17,8 @@ class CreateTrip extends Component
 
     public function createTrip()
     {
-
-        dd($this->tripName,$this->driver);
+        Task::query()->create();
+        dd($this->tripName,$this->driver,$this->tasks);
     }
 
     public function render()

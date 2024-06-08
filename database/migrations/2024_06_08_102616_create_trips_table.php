@@ -16,12 +16,10 @@ return new class extends Migration
             $table->string('name')->charset('utf8');
             $table->unsignedBigInteger('driver_id')->nullable();
             $table->unsignedBigInteger('truck_id')->nullable();
-            $table->unsignedBigInteger('task_id')->nullable();
 
             # create foreign keys
             $table->foreign('driver_id')->on('drivers')->references('id')->onDelete('set null');
             $table->foreign('truck_id')->on('trucks')->references('id')->onDelete('set null');
-            $table->foreign('task_id')->on('tasks')->references('id')->onDelete('set null');
 
             $table->timestamps();
         });
