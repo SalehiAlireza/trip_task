@@ -12,7 +12,7 @@
         <div class="message-chat">
             <div class="chat-body">
                 <div>
-                    <button class="btn btn-info">Trip #1</button>
+                    <button class="btn btn-info" wire:click="showDetail(1)">Trip #1</button>
                 </div>
                 <hr>
                 <div>
@@ -29,9 +29,9 @@
                         <tbody>
                         <tr>
 
-                            <td>Mark</td>
-                            <td>Otto</td>
-                            <td>@mdo</td>
+                            <td>{{ $this->driver  }}</td>
+                            <td>{{ $this->truck }}</td>
+                            <td>{{ $this->truckCode }}</td>
                         </tr>
 
                         </tbody>
@@ -42,7 +42,9 @@
                             <tr>
                                 <th scope="row">Tasks: </th>
                                 <td >
-                                    <span class="badge badge-info">asdad</span>
+                                    @foreach($this->tasks as $taskITem)
+                                        <span class="badge badge-info">asdad</span>
+                                    @endforeach
                                 </td>
                             </tr>
                         </thead>

@@ -20,7 +20,7 @@ class TruckFactory extends Factory
         $modelList = ['Toyota Tundra','Nissan Frontier','Toyota Tacoma','Ford F-Series','GMC Canyon'];
         return [
             'truck_model' => $modelList[random_int(0,4)],
-            'truck_code'  => Str::random('4').random_int(1000,9999)
+            'truck_code'  => Str::random('2').random_int(100,999)
         ];
     }
 }
