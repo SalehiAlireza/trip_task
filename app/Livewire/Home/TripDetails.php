@@ -2,6 +2,7 @@
 
 namespace App\Livewire\Home;
 
+use App\Models\Trip;
 use Livewire\Component;
 
 class TripDetails extends Component
@@ -13,10 +14,11 @@ class TripDetails extends Component
 
     public function showDetail($id)
     {
-        $this->truck = "asd";
-        $this->driver = "asd";
-        $this->truckCode = "asd";
-        $this->tasks = ['654','65456','4565'];
+        $trip = Trip::find($id);
+        $this->truck = $trip->truck->truck_model;
+        $this->truckCode = $trip->truck->truck_code;
+        $this->driver = $trip->driver->name;
+        $this->tasks = $trip->tasks;
     }
 
 
@@ -24,6 +26,7 @@ class TripDetails extends Component
 
     public function render()
     {
-        return view('livewire.home.trip-details');
+        $trips = Trip::all();
+        return view('livewire.home.trip-details',compact('trips'));
     }
 }

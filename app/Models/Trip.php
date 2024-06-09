@@ -14,4 +14,14 @@ class Trip extends Model
     {
         return $this->hasMany(Task::class);
     }
+
+    public function truck()
+    {
+        return $this->belongsTo(Truck::class);
+    }
+
+    public function driver()
+    {
+        return $this->belongsTo(Driver::class);
+    }
 }
