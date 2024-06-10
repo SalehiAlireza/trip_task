@@ -12,6 +12,13 @@ class TripDetails extends Component
     public $truckCode = '---';
     public $tasks = [];
 
+    protected $listeners = ['updateTripDetails' => 'updateTripDetails'];
+
+    public function updateTripDetails()
+    {
+        $this->render();
+    }
+
     public function showDetail($id)
     {
         $trip = Trip::find($id);

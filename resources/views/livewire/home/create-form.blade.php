@@ -24,7 +24,7 @@
                 <div class="col-md-6">
                     <label for="drivers">Select the driver</label>
                     <select name="drivers" id="drivers" wire:model="driver" class="form-control">
-                        @foreach($drivers as $driverItem)
+                        @foreach($driver as $driverItem)
                             <option value="{{ $driverItem->id }}">{{ $driverItem->name }}</option>
                         @endforeach
                     </select>
@@ -32,7 +32,7 @@
                 <div class="col-md-6">
                     <label for="trucks">Select the truck</label>
                     <select name="trucks" id="trucks" wire:model="truck" class="form-control">
-                        @foreach($trucks as $truckItem)
+                        @foreach($truck as $truckItem)
                             <option value="{{ $truckItem->id  }}">{{ 'Model: '.$truckItem->truck_model .' / '.$truckItem->truck_code }}</option>
                         @endforeach
                     </select>
