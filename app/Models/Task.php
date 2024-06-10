@@ -11,6 +11,6 @@ class Task extends Model
 
     public function scopeFreeTasks($query,$taskLists)
     {
-        return $query->whereIn($taskLists)->where('trip_id',null);
+        return $query->whereIn('id',$taskLists)->where('trip_id',null);
     }
 }
