@@ -19,10 +19,9 @@
 <script src="{{ asset('/bootstrap.min.js') }}"></script>
 <script src="{{ asset('/alert.js')  }}"></script>
 <script>
-    $(document).ready(function (){
-
-    })
-
+    Livewire.on('trip-created', () => {
+        alert('ssss')
+    });
 </script>
 </body>
 </html>

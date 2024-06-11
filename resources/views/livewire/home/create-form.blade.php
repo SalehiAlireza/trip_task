@@ -24,7 +24,7 @@
                 <div class="col-md-6">
                     <label for="drivers">Select the driver</label>
                     <select name="drivers" id="drivers" wire:model="driver" class="form-control">
-                        @foreach($driver as $driverItem)
+                        @foreach($drivers as $driverItem)
                             <option value="{{ $driverItem->id }}">{{ $driverItem->name }}</option>
                         @endforeach
                     </select>
@@ -32,7 +32,7 @@
                 <div class="col-md-6">
                     <label for="trucks">Select the truck</label>
                     <select name="trucks" id="trucks" wire:model="truck" class="form-control">
-                        @foreach($truck as $truckItem)
+                        @foreach($trucks as $truckItem)
                             <option value="{{ $truckItem->id  }}">{{ 'Model: '.$truckItem->truck_model .' / '.$truckItem->truck_code }}</option>
                         @endforeach
                     </select>
@@ -41,7 +41,7 @@
                 <div class="col-md-12">
                     <label for="trucks">Tasks</label>
                     <p class="text-se">( Hold the CTRL key and click to select multiple items )</p>
-                    <select  multiple wire:model="tasks" class="form-control">
+                    <select  multiple wire:model="taskSelected" class="form-control">
                         @foreach($this->tasks as $tasksItem)
                             @if(!is_null($tasksItem->trip_id))
                                 <option disabled value="{{ $tasksItem->id  }}" disabled style="text-decoration: line-through;">{{ $tasksItem->task }}</option>
